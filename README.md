@@ -4,12 +4,12 @@ Dépôt du TP de 222.1
 
 README - Projet Blog API Django
 
-I.###### DESCRIPTION DU PROJET
+### DESCRIPTION DU PROJET
 Ce projet est une API de blog développée avec Django et Django REST Framework.
 Il permet de gérer des articles avec plusieurs fonctionnalités essentielles : création, consultation, filtrage et recherche.
 L’objectif principal est de mettre en place une API simple et fonctionnelle pour manipuler des données de type blog.
 
-II.###### TECHNOLOGIES UTILISÉES
+### TECHNOLOGIES UTILISÉES
 
 Python
 Django
@@ -26,7 +26,7 @@ Vues et endpoints : API
 Admin : gestion via interface Django
 Templates HTML : pages simples
 
-IV.###### MODÈLE DE DONNÉES
+### MODÈLE DE DONNÉES
 
 class Article(models.Model):
     titre = models.CharField(max_length=50)
@@ -40,7 +40,7 @@ Ce modèle représente un article de blog avec ses informations principales.
 Les articles sont triés du plus récent au plus ancien.
 Exemple explicatif : un article pourrait avoir pour auteur “Sandy” pour illustrer le filtrage par auteur.
 
-V.###### INTERFACE D’ADMINISTRATION
+### INTERFACE D’ADMINISTRATION
 
 class ArticleAdmin(admin.ModelAdmin):
     list_display = ('titre','auteur','date','categorie')
@@ -50,7 +50,7 @@ admin.site.register(Article, ArticleAdmin)
 Permet de gérer les articles directement depuis l’interface d’administration Django.
 Exemple : on peut voir tous les articles écrits par “Sandy” dans l’admin.
 
-VI.##### CONFIGURATION DU PROJET
+### CONFIGURATION DU PROJET
 Dans settings.py, l’application blog et Django REST Framework sont activés pour exposer les endpoints de l’API :
 
 INSTALLED_APPS = [
@@ -106,7 +106,7 @@ def search(self, request):
 
 Endpoint : /api/articles/search/?query=django
 
-VIII. ######INTERFACE UTILISATEUR
+### INTERFACE UTILISATEUR
 
 def home(request):
     return render(request, 'page/home.html')
@@ -114,7 +114,7 @@ def home(request):
 Page d’accueil simple.
 Exemple de message affiché : “Bienvenue Sandy” pour illustrer l’affichage personnalisé d’un utilisateur.
 
-IX. #######CONFIGURATION ET LANCEMENT
+### CONFIGURATION ET LANCEMENT
 
 pip install django djangorestframework
 python manage.py makemigrations
@@ -123,7 +123,7 @@ python manage.py runserver
 
 Ces commandes permettent d’installer les dépendances, configurer la base de données et lancer le serveur.
 
-X.###### UTILISATION DES ENDPOINTS
+### UTILISATION DES ENDPOINTS
 Les endpoints permettent :
 
 d’accéder à la liste des articles
@@ -137,12 +137,12 @@ Exemples :
 /api/articles/?autor=Sandy (exemple illustratif)
 /api/articles/search/?query=django
 
-XI. ######REMARQUES
+### REMARQUES
 
 Correction d’incohérences entre noms de champs (anglais/français)
 Correction des filtres et de la logique de recherche
 
-XII.##### AMÉLIORATIONS POSSIBLES
+### AMÉLIORATIONS POSSIBLES
 
 Authentification pour sécuriser les endpoints
 Gestion des utilisateurs
