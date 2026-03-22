@@ -16,7 +16,7 @@ README - Projet Blog API Django
                 Django REST Framework
                 SQLite (base de données par défaut)
 
-III.###### STRUCTURE DU PROJET
+### STRUCTURE DU PROJET
         Le projet est organisé autour de deux parties principales :
         
         Projet principal : configuration globale
